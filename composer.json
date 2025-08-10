@@ -1,5 +1,5 @@
 {
-    "name": "alluvamz/paychangu-mobile",
+    "name": "alluvamz/php-paychangu-mobile",
     "description": "A PHP package for interacting with the PayChangu API.",
     "type": "library",
     "license": "MIT",
