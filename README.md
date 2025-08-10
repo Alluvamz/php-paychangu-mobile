@@ -1,17 +1,6 @@
-# PayChangu PHP Client
+# PayChangu Mobile PHP Client
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/enonj/paychangu.svg?style=flat-square)](https://packagist.org/packages/enonj/paychangu)
-[![Total Downloads](https://img.shields.io/packagist/dt/enonj/paychangu.svg?style=flat-square)](https://packagist.org/packages/enonj/paychangu)
-
-A PHP package for interacting with the PayChangu API.
-
-## Installation
-
-You can install the package via composer:
-
-```bash
-composer require enonj/paychangu
-```
+A PHP package for interacting with the PayChangu Mobile API.
 
 ## Usage
 
@@ -19,7 +8,7 @@ composer require enonj/paychangu
 use Alluvamz\PayChanguMobile\PayChanguIntegration;
 use Alluvamz\PayChanguMobile\Data\Request\ChargeMobileRequestData;
 
-$payChangu = new PayChanguIntegration('YOUR_PUBLIC_KEY', 'YOUR_PRIVATE_KEY');
+$payChangu = new PayChanguIntegration('YOUR_PRIVATE_KEY');
 
 // Get mobile operators
 $operators = $payChangu->getMobileOperators();
@@ -34,26 +23,5 @@ $chargeData = new ChargeMobileRequestData(
 
 $response = $payChangu->makeDirectCharge($chargeData);
 ```
-
-## Testing
-
-```bash
-composer test
-```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security
-
-If you discover any security related issues, please email your@email.com instead of using the issue tracker.
-
-## Credits
-
-- [Your Name](https://github.com/your-username)
-- [All Contributors](../../contributors)
-
-## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
