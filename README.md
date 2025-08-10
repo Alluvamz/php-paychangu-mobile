@@ -4,6 +4,8 @@ A PHP package for interacting with the PayChangu Mobile API.
 
 ## Usage
 
+see [Paychangu Charge Request](https://developer.paychangu.com/reference/charge-mobile-money)
+
 ```php
 use Alluvamz\PayChanguMobile\PayChanguIntegration;
 use Alluvamz\PayChanguMobile\Data\Request\ChargeMobileRequestData;
@@ -24,7 +26,7 @@ $response = $payChangu->makeDirectCharge($chargeData);
 ## Fetching Mobile Operators
 
 This will fetch mobile operators supported by paychangu (TNM,AIRTEL...)
-se [PayChangu Mobile Money Operators](https://developer.paychangu.com/reference/supported-momo-operators)
+see [PayChangu Mobile Money Operators](https://developer.paychangu.com/reference/supported-momo-operators)
 
 ```php
 use Alluvamz\PayChanguMobile\PayChanguIntegration;
