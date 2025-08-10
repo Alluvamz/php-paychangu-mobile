@@ -21,4 +21,59 @@ $chargeData = new ChargeMobileRequestData(
 $response = $payChangu->makeDirectCharge($chargeData);
 ```
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+## Fetching Mobile Operators
+
+This will fetch mobile operators supported by paychangu (TNM,AIRTEL...)
+se [PayChangu Mobile Money Operators](https://developer.paychangu.com/reference/supported-momo-operators)
+
+```php
+use Alluvamz\PayChanguMobile\PayChanguIntegration;
+use Alluvamz\PayChanguMobile\Data\Request\ChargeMobileRequestData;
+
+$payChangu = new PayChanguIntegration('YOUR_PRIVATE_KEY');
+
+$repository = new MobileOperatorRepository($payChangu);
+
+$repository->all()
+```
+
+## How To Get Operate Ref Id
+
+see [PayChangu Mobile Money Operators](https://developer.paychangu.com/reference/supported-momo-operators)
+
+```php
+use Alluvamz\PayChanguMobile\PayChanguIntegration;
+use Alluvamz\PayChanguMobile\Data\Request\ChargeMobileRequestData;
+
+$payChangu = new PayChanguIntegration('YOUR_PRIVATE_KEY');
+
+$repository = new MobileOperatorRepository($payChangu);
+
+$repository->findByShortCode('tnm')->refId
+```
+
+## How To Check Charge Details
+
+see [Paychangu Single Charge details](https://developer.paychangu.com/reference/single-charge-details)
+
+```php
+use Alluvamz\PayChanguMobile\PayChanguIntegration;
+use Alluvamz\PayChanguMobile\Data\Request\ChargeMobileRequestData;
+
+$payChangu = new PayChanguIntegration('YOUR_PRIVATE_KEY');
+
+$payChangu->getDirectChargeDetails('YOUR_CHARGE_ID')
+```
+
+## How To Verify Direct Charge Status
+
+see [Paychangu Verify Direct Charge Status](https://developer.paychangu.com/reference/verify-direct-charge-status)
+
+```php
+use Alluvamz\PayChanguMobile\PayChanguIntegration;
+use Alluvamz\PayChanguMobile\Data\Request\ChargeMobileRequestData;
+
+$payChangu = new PayChanguIntegration('YOUR_PRIVATE_KEY');
+
+$payChangu->getDirectChargeStatus('YOUR_CHARGE_ID')
+```

@@ -12,7 +12,9 @@ class MobileOperatorRepository
 {
     private static array $operators = [];
 
-    public function __construct(private PayChanguIntegration $payChanguIntegration) {}
+    public function __construct(private PayChanguIntegration $payChanguIntegration)
+    {
+    }
 
     public function all(): array
     {
@@ -31,7 +33,7 @@ class MobileOperatorRepository
 
     public function findByShortCode(string $shortCode): ?MobileOperator
     {
-        $found = array_filter($this->all(), fn (MobileOperator $mobileOperator) => $mobileOperator->shortCode === $shortCode);
+        $found = array_filter($this->all(), fn (MobileOperator $mobileOperator) => strtolower($mobileOperator->shortCode) === strtolower($shortCode));
 
         return reset($found) ?: null;
     }
