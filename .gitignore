@@ -1,0 +1,31 @@
+# Composer dependencies
+/vendor/
+
+# Composer lock file (for libraries; keep for apps)
+composer.lock
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE/project settings
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# PHPUnit
+.phpunit.result.cache
+coverage/
+
+# Logs
+*.log
+
+# Node (if you have frontend assets in your package)
+node_modules/
+npm-debug.log
+yarn.lock
+pnpm-lock.yaml
+
+# Cache
+.cache/
