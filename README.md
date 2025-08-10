@@ -10,9 +10,6 @@ use Alluvamz\PayChanguMobile\Data\Request\ChargeMobileRequestData;
 
 $payChangu = new PayChanguIntegration('YOUR_PRIVATE_KEY');
 
-// Get mobile operators
-$operators = $payChangu->getMobileOperators();
-
 // Make a direct charge
 $chargeData = new ChargeMobileRequestData(
     chargeId: 'YOUR_CHARGE_ID',
